@@ -43,5 +43,38 @@ body {
 }
 .masthead-nav a:hover { color: var(--gold); }
 
+.comic-panel {
+  border: 3px solid var(--burgundy);
+  box-shadow: 6px 6px 0px var(--burgundy-dark);
+  background: var(--newsprint);
+  padding: 2rem;
+  margin: 1rem;
+  position: relative;
+  transition: transform 0.3s;
+}
+.comic-panel:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--burgundy-dark);
+}
+.speech-bubble {
+  background: white;
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  position: relative;
+  font-family: 'Special Elite', cursive;
+  margin-top: 1.5rem;
+}
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+  border: 10px solid transparent;
+  border-top-color: var(--ink);
+}
+
+
 
 
