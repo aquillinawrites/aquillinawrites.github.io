@@ -1,0 +1,141 @@
+:root {
+  --burgundy:      #6B1A2A;   /* Primary — deep ink burgundy */
+  --burgundy-dark: #4A0E1A;   /* Hover states, shadows */
+  --burgundy-light:#F9F0F2;   /* Backgrounds, panels */
+  --cream:         #FDF6E3;   /* Page background */
+  --ink:           #1A1008;   /* Body text */
+  --gold:          #C8963E;   /* Accent, borders, stars */
+  --newsprint:     #E8DFD0;   /* Panel backgrounds */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--cream);
+  background-image: radial-gradient(circle, #00000008 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'IM Fell English', serif;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--burgundy); }
+p { margin-bottom: 1rem; font-size: 1.1rem; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.text-center { text-align: center; }
+
+/* MASTHEAD / NAV */
+.masthead {
+  text-align: center;
+  border-bottom: 4px double var(--burgundy);
+  padding: 2rem 1rem;
+  background: var(--cream);
+}
+.masthead-date { font-family: 'Special Elite', cursive; font-size: 0.9rem; }
+.masthead-title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+.masthead-tagline { font-style: italic; margin-bottom: 1.5rem; }
+.masthead-nav a {
+  font-family: 'Special Elite', cursive;
+  color: var(--burgundy);
+  text-decoration: none;
+  margin: 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+.masthead-nav a:hover { color: var(--gold); }
+
+/* COMIC PANELS */
+.comic-panel {
+  border: 3px solid var(--burgundy);
+  box-shadow: 6px 6px 0px var(--burgundy-dark);
+  background: var(--newsprint);
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s;
+}
+.comic-panel:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--burgundy-dark);
+}
+
+/* HERO SECTION */
+.hero { margin: 4rem auto; max-width: 800px; }
+.hero-headline { font-size: 2.5rem; min-height: 4rem; }
+
+/* SPEECH BUBBLE */
+.speech-bubble {
+  background: white;
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  position: relative;
+  font-family: 'Special Elite', cursive;
+  margin-top: 1.5rem;
+}
+.speech-bubble::after {
+  content: ''; position: absolute;
+  bottom: -20px; left: 30px;
+  border: 10px solid transparent;
+  border-top-color: var(--ink);
+}
+
+/* ABOUT PAGE */
+.about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+.dropcap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem; font-weight: 900; float: left;
+  line-height: 1; padding-right: 0.1em;
+  color: var(--burgundy);
+}
+
+/* PORTFOLIO / BLOG GRIDS */
+.portfolio-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
+}
+
+/* PORTFOLIO CARD FLIP */
+.portfolio-card { perspective: 1000px; height: 280px; cursor: pointer; }
+.card-inner {
+  transition: transform 0.6s; transform-style: preserve-3d;
+  position: relative; height: 100%;
+}
+.portfolio-card:hover .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back {
+  position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+}
+.card-back {
+  background: var(--burgundy); color: white;
+  transform: rotateY(180deg);
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  border: 3px solid var(--gold); box-shadow: 6px 6px 0px var(--burgundy-dark);
+}
+.pub-stamp { font-family: 'Special Elite'; font-size: 0.8rem; margin-bottom: 10px; color: var(--gold); }
+.category-tag { font-family: 'Special Elite'; font-size: 0.7rem; background: var(--burgundy); color: white; padding: 3px 8px; position: absolute; bottom: 15px; left: 15px; }
+
+/* BUTTONS & FORMS */
+.read-btn, .filter-btn {
+  background: var(--gold); color: var(--ink);
+  padding: 0.5rem 1.5rem; font-family: 'Special Elite', cursive;
+  text-decoration: none; border: 2px solid var(--ink);
+  transition: 0.3s;
+}
+.read-btn:hover, .filter-btn:hover, .filter-btn.active { background: var(--burgundy); color: white; }
+.form-input {
+  padding: 1rem; border: 2px solid var(--ink);
+  background: var(--cream); font-family: 'IM Fell English', serif; font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .masthead-nav a { display: block; margin: 0.5rem 0; }
+}
