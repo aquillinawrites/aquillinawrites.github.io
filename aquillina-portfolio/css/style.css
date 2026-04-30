@@ -8,3 +8,13 @@
   --newsprint:     #E8DFD0;   /* Panel backgrounds */
 }
 
+body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle, #00000008 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'IM Fell English', serif;
+  color: var(--ink);
+}
+
+
