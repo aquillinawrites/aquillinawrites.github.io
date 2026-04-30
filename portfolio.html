@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Aquillina Ngowera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-date">Est. 2024 — Vol. I</div>
+    <h1 class="masthead-title">The Aquillina Ngowera Gazette</h1>
+    <nav class="masthead-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container text-center">
+    <div class="filters" style="margin: 2rem 0;">
+      <button class="filter-btn active" data-category="all">All Front Pages</button>
+      <button class="filter-btn" data-category="feature">Feature Writing</button>
+      <button class="filter-btn" data-category="copy">Copywriting</button>
+    </div>
+
+    <div class="portfolio-grid scroll-reveal">
+      <!-- Item 1 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <div class="pub-stamp">The Borgen Project</div>
+            <h3>Girls’ Education in South Africa</h3>
+            <p>A profile piece on Sewing For Our Girls...</p>
+            <span class="category-tag">Feature Writing</span>
+          </div>
+          <div class="card-back">
+            <p>Read the full feature piece.</p>
+            <a href="#" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <div class="pub-stamp">ROCKBlue</div>
+            <h3>Contributing Pieces</h3>
+            <p>Water and sanitation insights (Jul–Sep 2022)</p>
+            <span class="category-tag">Feature Writing</span>
+          </div>
+          <div class="card-back">
+            <p>Explore the insights.</p>
+            <a href="#" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="portfolio-card blog-card" data-category="copy">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <div class="pub-stamp">INKFISH & Rankflux</div>
+            <h3>Digital Marketing Copy</h3>
+            <p>Crafting high-converting digital content strategies.</p>
+            <span class="category-tag">Copywriting</span>
+          </div>
+          <div class="card-back">
+            <p>See the copy in action.</p>
+            <a href="#" class="read-btn">View Work →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
