@@ -1,1 +1,10 @@
+:root {
+  --burgundy:      #6B1A2A;   /* Primary — deep ink burgundy */
+  --burgundy-dark: #4A0E1A;   /* Hover states, shadows */
+  --burgundy-light:#F9F0F2;   /* Backgrounds, panels */
+  --cream:         #FDF6E3;   /* Page background */
+  --ink:           #1A1008;   /* Body text */
+  --gold:          #C8963E;   /* Accent, borders, stars */
+  --newsprint:     #E8DFD0;   /* Panel backgrounds */
+}
 
