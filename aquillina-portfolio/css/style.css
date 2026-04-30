@@ -75,6 +75,17 @@ body {
   border-top-color: var(--ink);
 }
 
+.dropcap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  float: left;
+  line-height: 1;
+  padding-right: 0.1em;
+  color: var(--burgundy);
+}
+
+
 
 
 
