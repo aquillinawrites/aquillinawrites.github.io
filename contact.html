@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Aquillina Ngowera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-date">Est. 2024 — Vol. I</div>
+    <h1 class="masthead-title">The Aquillina Ngowera Gazette</h1>
+    <nav class="masthead-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container text-center">
+    <section class="letters-section comic-panel scroll-reveal" style="max-width: 600px; margin: 3rem auto;">
+      <h2 class="section-headline">Letters to the Editor</h2>
+      <p style="font-family: 'Special Elite';">Have a project in mind? Drop me a line.</p>
+      <form action="https://formspree.io/f/YOUR_ID" method="POST" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+        <input type="text" name="name" placeholder="Your name" required class="form-input">
+        <input type="email" name="email" placeholder="Your email" required class="form-input">
+        <textarea name="message" placeholder="Your message..." rows="5" required class="form-input"></textarea>
+        <button type="submit" class="read-btn" style="cursor: pointer;">Send Letter →</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
