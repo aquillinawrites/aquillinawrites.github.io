@@ -17,4 +17,31 @@ body {
   color: var(--ink);
 }
 
+.masthead {
+  text-align: center;
+  border-bottom: 4px double var(--burgundy);
+  padding: 2rem;
+  background: var(--cream);
+}
+.masthead-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  color: var(--burgundy);
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.masthead-nav a {
+  font-family: 'Special Elite', cursive;
+  color: var(--burgundy);
+  text-decoration: none;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+.masthead-nav a:hover { color: var(--gold); }
+
+
 
