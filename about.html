@@ -4,10 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Aquillina Ngowera</title>
+  
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Special Styles for the new Dark Contact Section -->
+  <style>
+    .dark-contact {
+      background-color: #333232;
+      color: #e8dfd0;
+      padding: 4rem 2rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      text-align: left;
+    }
+    .contact-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid #555;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .contact-title {
+      font-family: 'Special Elite', cursive;
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: #f4ebd9;
+      line-height: 1;
+      margin: 0;
+    }
+    .contact-info p {
+      margin: 0.5rem 0;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .contact-info i {
+      margin-right: 10px;
+      color: #e8dfd0;
+    }
+    .contact-info span {
+      color: #d8705c;
+    }
+    .form-cols {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+    }
+    .col-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .col-left input, .col-right textarea {
+      background-color: #f4ebd9;
+      border: none;
+      padding: 1rem;
+      font-family: sans-serif;
+      font-size: 0.95rem;
+      color: #333;
+      width: 100%;
+    }
+    .col-right textarea {
+      height: 100%;
+      min-height: 150px;
+      resize: none;
+    }
+    .col-left input:focus, .col-right textarea:focus {
+      outline: 3px solid #d8705c;
+    }
+    .send-btn {
+      background-color: #d8705c;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 2.5rem;
+      font-size: 1.2rem;
+      font-family: 'Special Elite', cursive;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      letter-spacing: 1px;
+    }
+    .send-btn:hover {
+      background-color: #bf5b48;
+    }
+    .social-footer {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .social-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: #f4ebd9;
+      color: #333;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.8rem;
+      transition: all 0.3s;
+    }
+    .social-circle:hover {
+      background-color: #d8705c;
+      color: #fff;
+      transform: translateY(-5px);
+    }
+    @media (max-width: 768px) {
+      .form-cols { grid-template-columns: 1fr; }
+      .contact-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
   <header class="masthead">
@@ -23,9 +140,10 @@
     </nav>
   </header>
 
-  <main class="container">
-    <div class="about-grid scroll-reveal">
-      
+  <main class="container text-center">
+    
+    <!-- Top About Section -->
+    <div class="about-grid scroll-reveal text-left">
       <!-- Image Panel -->
       <div class="comic-panel text-center">
         <img src="files/profile.png" alt="Aquillina P. Ngowera" style="width: 100%; height: auto; border: 3px solid var(--burgundy); object-fit: cover;">
@@ -35,7 +153,7 @@
       </div>
       
       <!-- Text Panel -->
-      <div class="comic-panel">
+      <div class="comic-panel text-left">
         <h2 style="margin-bottom: 0;">Aquillina P. Ngowera</h2>
         <p style="font-family: 'Special Elite', cursive; color: var(--gold); margin-bottom: 20px;">Freelance Copywriter and Ghostwriter</p>
         
@@ -51,9 +169,50 @@
           <li>Content Strategy</li>
         </ul>
       </div>
-
     </div>
+
+    <!-- Thanks For Stopping By Message -->
+    <div class="scroll-reveal" style="margin: 6rem 0 3rem;">
+      <h2 style="font-size: clamp(3.5rem, 8vw, 6rem); font-family: 'Playfair Display', sans-serif; color: var(--ink); line-height: 1.1; letter-spacing: -2px;">Thanks for <br>stopping by.</h2>
+    </div>
+
+    <!-- Dark Contact Section -->
+    <section class="dark-contact scroll-reveal">
+      <div class="contact-header">
+        <h2 class="contact-title">CONTACT ME</h2>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-address-card"></i> <strong>Address //</strong> Chiredzi, Zimbabwe</p>
+          <p><i class="fa-solid fa-phone"></i> <strong>Telephone. //</strong> +263 77 439 5998</p>
+          <p><i class="fa-solid fa-envelope"></i> <strong>E-Mail //</strong> <span>angowera@gmail.com</span></p>
+        </div>
+      </div>
+
+      <!-- FORM - Replace the action link below! -->
+      <form action="https://formspree.io/f/maqvnjob" method="POST" class="contact-form">
+        <div class="form-cols">
+          <div class="col-left">
+            <input type="text" name="name" placeholder="Your Name*" required>
+            <input type="email" name="email" placeholder="Your e-mail address*" required>
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <div class="col-right">
+            <textarea name="message" placeholder="Type your message here.." required></textarea>
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <button type="submit" class="send-btn">SEND!</button>
+        </div>
+      </form>
+
+      <!-- Social Media Icons -->
+      <div class="social-footer">
+        <a href="https://www.linkedin.com/in/aquillina-panashe-ngowera/" target="_blank" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/aqua.ngowera" target="_blank" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </section>
+
   </main>
+  
   <script src="js/main.js"></script>
 </body>
 </html>
