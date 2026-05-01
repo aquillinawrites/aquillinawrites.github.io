@@ -8,11 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Special adjustments to fit images perfectly into the comic cards */
+    .portfolio-card { height: 420px; }
+    .card-front.comic-panel { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+    .card-front img { width: 100%; height: 160px; object-fit: cover; border-bottom: 3px solid var(--burgundy); }
+    .card-content { padding: 1.2rem; text-align: left; flex-grow: 1; position: relative; }
+    .card-content h3 { font-size: 1.1rem; margin-bottom: 0.5rem; line-height: 1.2; }
+    .card-content p { font-size: 0.85rem; line-height: 1.4; margin-bottom: 0; }
+    .pub-stamp { font-size: 0.75rem; margin-bottom: 5px; }
+    .category-tag { position: relative; display: inline-block; bottom: auto; left: auto; margin-top: 15px; }
+  </style>
 </head>
 <body>
   <header class="masthead">
-    <div class="masthead-date">Est. 2024 — Vol. I</div>
-    <h1 class="masthead-title">The Aquillina Ngowera Gazette</h1>
+    <div class="masthead-date">Est. 2018 — Vol. I</div>
+    <h1 class="masthead-title">AQUILLINA NGOWERA</h1>
+    <div class="masthead-tagline" style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; margin-bottom: 1.5rem;">Writer. Editor. Storyteller</div>
     <nav class="masthead-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -32,53 +44,140 @@
     </div>
 
     <div class="portfolio-grid scroll-reveal">
-      <!-- Item 1 -->
-      <div class="portfolio-card blog-card" data-category="feature">
-        <div class="card-inner">
-          <div class="card-front comic-panel">
-            <div class="pub-stamp">The Borgen Project</div>
-            <h3>Girls’ Education in South Africa</h3>
-            <p>A profile piece on Sewing For Our Girls...</p>
-            <span class="category-tag">Feature Writing</span>
-          </div>
-          <div class="card-back">
-            <p>Read the full feature piece.</p>
-            <a href="#" class="read-btn">Read Article →</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Item 2 -->
-      <div class="portfolio-card blog-card" data-category="feature">
-        <div class="card-inner">
-          <div class="card-front comic-panel">
-            <div class="pub-stamp">ROCKBlue</div>
-            <h3>Contributing Pieces</h3>
-            <p>Water and sanitation insights (Jul–Sep 2022)</p>
-            <span class="category-tag">Feature Writing</span>
-          </div>
-          <div class="card-back">
-            <p>Explore the insights.</p>
-            <a href="#" class="read-btn">Read Article →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
+      <!-- Copywriting 1 -->
       <div class="portfolio-card blog-card" data-category="copy">
         <div class="card-inner">
           <div class="card-front comic-panel">
-            <div class="pub-stamp">INKFISH & Rankflux</div>
-            <h3>Digital Marketing Copy</h3>
-            <p>Crafting high-converting digital content strategies.</p>
-            <span class="category-tag">Copywriting</span>
+            <img src="files/malawi.png" alt="Hunger in Malawi">
+            <div class="card-content">
+              <div class="pub-stamp">The Borgen Project</div>
+              <h3>Top 10 Facts About Hunger in Malawi</h3>
+              <p>Malawi is facing a severe crisis with extreme poverty impacting two out of three Malawians...</p>
+              <span class="category-tag">Copywriting</span>
+            </div>
           </div>
           <div class="card-back">
-            <p>See the copy in action.</p>
-            <a href="#" class="read-btn">View Work →</a>
+            <p>Read the full piece.</p>
+            <a href="https://borgenproject.org/top-10-facts-about-hunger-in-malawi/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
           </div>
         </div>
       </div>
+
+      <!-- Copywriting 2 -->
+      <div class="portfolio-card blog-card" data-category="copy">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <img src="files/ebola.png" alt="Ebola in Nigeria">
+            <div class="card-content">
+              <div class="pub-stamp">The Borgen Project</div>
+              <h3>A Look at the History of Ebola in Nigeria</h3>
+              <p>The Ebola virus is a very rare, but very deadly disease that occurs in humans and other primates...</p>
+              <span class="category-tag">Copywriting</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Read the full piece.</p>
+            <a href="https://borgenproject.org/a-look-at-the-history-of-ebola-in-nigeria/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 1 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <img src="files/urban.png" alt="Urban Flow Magazine">
+            <div class="card-content">
+              <div class="pub-stamp">ROCKBlue</div>
+              <h3>Urban Flow Magazine Premiere Launch</h3>
+              <p>Women have shared their wisdom and knowledge building resources for advancing careers in WASH...</p>
+              <span class="category-tag">Feature Writing</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Read the full feature.</p>
+            <a href="https://www.rockblue.org/the-womens-utility-leadership-in-urban-wash-wuluw-initiative-has-launched-the-first-ever-issue-of-our-publication-urban-flow-magazine/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <img src="files/girls-sa.png" alt="Girls Education in South Africa">
+            <div class="card-content">
+              <div class="pub-stamp">Borgen Magazine</div>
+              <h3>Girls' Education in South Africa</h3>
+              <p>A look into a university assignment that took a class a step further into making the world a better place...</p>
+              <span class="category-tag">Feature Writing</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Read the full feature.</p>
+            <a href="https://www.borgenmagazine.com/girls-education-in-south-africa/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <img src="files/living-sa.png" alt="Living Conditions in South Africa">
+            <div class="card-content">
+              <div class="pub-stamp">Borgen Magazine</div>
+              <h3>Living Conditions in South Africa</h3>
+              <p>An overview of living conditions in South Africa and its development compared to other nations...</p>
+              <span class="category-tag">Feature Writing</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Read the full feature.</p>
+            <a href="https://www.borgenmagazine.com/living-conditions-in-south-africa/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <img src="files/mozambique.png" alt="Living Conditions in Mozambique">
+            <div class="card-content">
+              <div class="pub-stamp">The Borgen Project</div>
+              <h3>Living Conditions in Mozambique</h3>
+              <p>Top 10 facts about living conditions in Mozambique, exploring its population growth and economic hurdles...</p>
+              <span class="category-tag">Feature Writing</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Read the full piece.</p>
+            <a href="https://borgenproject.org/top-10-facts-about-living-conditions-in-mozambique/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="portfolio-card blog-card" data-category="feature">
+        <div class="card-inner">
+          <div class="card-front comic-panel">
+            <img src="files/ghana.png" alt="Living Conditions in Ghana">
+            <div class="card-content">
+              <div class="pub-stamp">The Borgen Project</div>
+              <h3>Living Conditions in Ghana</h3>
+              <p>Ghana faces many of the problems common amongst developing countries including lack of natural resources...</p>
+              <span class="category-tag">Feature Writing</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Read the full piece.</p>
+            <a href="https://borgenproject.org/top-10-facts-about-living-conditions-in-ghana/" target="_blank" rel="noopener noreferrer" class="read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
   <script src="js/main.js"></script>
